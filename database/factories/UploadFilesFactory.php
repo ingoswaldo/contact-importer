@@ -26,7 +26,7 @@ class UploadFilesFactory extends Factory
             'user_id'      => $this->faker->randomDigit(),
             'url'          => $this->faker->filePath(),
             'column_names' => $this->faker->randomElements(),
-            'state'        => $this->faker->randomElement(['On Hold', 'Processing', 'Failed', 'Finished']),
+            'status'       => $this->faker->randomElement(['On Hold', 'Processing', 'Failed', 'Finished']),
             'log'          => $this->faker->text
         ];
     }

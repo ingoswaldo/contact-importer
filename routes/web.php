@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,7 @@ Route::group(['middleware' => 'auth'], function (Router $authRouter){
     $authRouter->get('/dashboard', DashboardController::class)->name('dashboard');
 
     $authRouter->resource('contacts', ContactController::class);
+    $authRouter->resource('upload-files', UploadFileController::class);
 });
 
 require __DIR__.'/auth.php';

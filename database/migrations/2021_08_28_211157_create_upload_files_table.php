@@ -18,7 +18,7 @@ class CreateUploadFilesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('url');
             $table->json('column_names');
-            $table->string('state', 20);
+            $table->string('status', 20);
             $table->text('log');
             $table->timestamps();
             $table->softDeletes();

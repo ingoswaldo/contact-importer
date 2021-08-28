@@ -12,7 +12,7 @@ class Table extends LivewireDatatable
 {
     public $model = Contact::class;
 
-    public function columns()
+    public function columns(): array
     {
         return [
             NumberColumn::name('id')

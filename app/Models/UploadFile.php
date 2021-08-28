@@ -17,7 +17,7 @@ class UploadFile extends Model
         'user_id',
         'url',
         'column_names',
-        'state',
+        'status',
         'log'
     ];
 
@@ -25,12 +25,12 @@ class UploadFile extends Model
         'column_names' => 'array'
     ];
 
-    protected function user(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    protected function contact(): HasOne
+    public function contact(): HasOne
     {
         return $this->hasOne(Contact::class);
     }
