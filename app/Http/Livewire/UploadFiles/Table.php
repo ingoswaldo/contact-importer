@@ -5,6 +5,7 @@ namespace App\Http\Livewire\UploadFiles;
 use App\Models\UploadFile;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
+use Mediconesystems\LivewireDatatables\JsonColumn;
 use Mediconesystems\LivewireDatatables\NumberColumn;
 
 class Table extends LivewireDatatable
@@ -19,6 +20,7 @@ class Table extends LivewireDatatable
             Column::name('user.id')
                 ->label('User'),
             Column::name('url'),
+            JsonColumn::name('column_names'),
             Column::name('status'),
             Column::name('log'),
         ];
