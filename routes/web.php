@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Routing\Router;
@@ -20,6 +21,8 @@ Route::get('/', WelcomeController::class);
 
 Route::group(['middleware' => 'auth'], function (Router $authRouter){
     $authRouter->get('/dashboard', DashboardController::class)->name('dashboard');
+
+    $authRouter->resource('contacts', ContactController::class);
 });
 
 require __DIR__.'/auth.php';
