@@ -14,10 +14,10 @@ class WelcomeController extends Controller
      * Handle the incoming request.
      *
      * @param  Request  $request
-     * @return Application|Factory|View
+     * @return RedirectResponse
      */
     public function __invoke(Request $request)
     {
-        return view('welcome');
+        return redirect()->route('register');
     }
 }

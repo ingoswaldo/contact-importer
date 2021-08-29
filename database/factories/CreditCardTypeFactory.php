@@ -22,7 +22,7 @@ class CreditCardTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->creditCardType,
+            'name' => $this->faker->creditCardType(),
             'inn_ranges' => $this->faker->randomElements,
             'length_ranges' => $this->faker->randomDigitNotZero(),
         ];

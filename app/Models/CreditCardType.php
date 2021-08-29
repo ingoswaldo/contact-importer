@@ -16,4 +16,8 @@ class CreditCardType extends Model
         'inn_ranges',
         'length_ranges'
     ];
+
+    protected $casts = [
+        'inn_ranges' => 'array'
+    ];
 }

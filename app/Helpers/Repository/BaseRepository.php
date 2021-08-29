@@ -53,7 +53,7 @@ class BaseRepository implements Contracts\Repository
             ->update($attributes);
     }
 
-    protected function query(): Builder
+    public function query(): Builder
     {
         return $this->model->query();
     }
