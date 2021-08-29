@@ -20,7 +20,9 @@ class Table extends LivewireDatatable
             Column::name('user.id')
                 ->label('User'),
             Column::name('url'),
-            JsonColumn::name('column_names'),
+            JsonColumn::callback('column_names', function ($value){
+                return join(', ', json_decode($value, true));
+            })->label('Column Names'),
             Column::name('status'),
             Column::name('log'),
         ];

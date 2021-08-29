@@ -8,6 +8,7 @@
             class="block mt-1 w-full"
             type="file"
             name="file"
+            accept=".csv"
             wire:model="file"
             required />
 
@@ -26,7 +27,7 @@
             class="block mt-1 w-full"
             type="text"
             name="name_column_name"
-            wire:model="nameColumnName"
+            wire:model="name_column_name"
             required />
 
     <x-input-error
@@ -42,9 +43,9 @@
     <x-input
             id="email_column_name"
             class="block mt-1 w-full"
-            type="email"
+            type="text"
             name="email_column_name"
-            wire:model="emailColumnName"
+            wire:model="email_column_name"
             required />
 
     <x-input-error
@@ -62,7 +63,7 @@
             class="block mt-1 w-full"
             type="text"
             name="birthdate_column_name"
-            wire:model="birthdateColumnName"
+            wire:model="birthdate_column_name"
             required />
 
     <x-input-error
@@ -80,7 +81,7 @@
             class="block mt-1 w-full"
             type="text"
             name="phone_column_name"
-            wire:model="phoneColumnName"
+            wire:model="phone_column_name"
             required />
 
     <x-input-error
@@ -98,7 +99,7 @@
             class="block mt-1 w-full"
             type="text"
             name="address_column_name"
-            wire:model="addressColumnName"
+            wire:model="address_column_name"
             required />
 
     <x-input-error
@@ -116,7 +117,7 @@
             class="block mt-1 w-full"
             type="text"
             name="credit_card_column_name"
-            wire:model="creditCardColumnName"
+            wire:model="credit_card_column_name"
             required />
 
     <x-input-error
@@ -134,7 +135,7 @@
             class="block mt-1 w-full"
             type="text"
             name="franchise_column_name"
-            wire:model="franchiseColumnName"
+            wire:model="franchise_column_name"
             required />
 
     <x-input-error

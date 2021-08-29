@@ -23,8 +23,8 @@ Route::get('/', WelcomeController::class);
 Route::group(['middleware' => 'auth'], function (Router $authRouter){
     $authRouter->get('/dashboard', DashboardController::class)->name('dashboard');
 
-    $authRouter->resource('contacts', ContactController::class);
-    $authRouter->resource('upload-files', UploadFileController::class);
+    $authRouter->resource('contacts', ContactController::class)->only('index');
+    $authRouter->resource('upload-files', UploadFileController::class)->only('index');
 });
 
 require __DIR__.'/auth.php';

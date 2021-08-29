@@ -19,7 +19,7 @@ class CreateUploadFilesTable extends Migration
             $table->string('url');
             $table->json('column_names');
             $table->string('status', 20);
-            $table->text('log');
+            $table->text('log')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
