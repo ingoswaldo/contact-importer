@@ -42,7 +42,7 @@
     <x-input
             id="email_column_name"
             class="block mt-1 w-full"
-            type="text"
+            type="email"
             name="email_column_name"
             wire:model="emailColumnName"
             required />

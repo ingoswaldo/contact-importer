@@ -23,7 +23,7 @@ class UploadFilesFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id'      => $this->faker->randomDigit(),
+            'user_id'      => $this->faker->randomDigitNotZero(),
             'url'          => $this->faker->filePath(),
             'column_names' => $this->faker->randomElements(),
             'status'       => $this->faker->randomElement(['On Hold', 'Processing', 'Failed', 'Finished']),

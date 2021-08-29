@@ -23,8 +23,8 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id'        => $this->faker->randomDigit(),
-            'upload_file_id' => $this->faker->randomDigit(),
+            'user_id'        => $this->faker->randomDigitNotZero(),
+            'upload_file_id' => $this->faker->randomDigitNotZero(),
             'name'           => $this->faker->name,
             'email'          => $this->faker->unique()->safeEmail(),
             'birthdate'      => $this->faker->dateTime,
